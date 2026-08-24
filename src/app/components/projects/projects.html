@@ -1,0 +1,79 @@
+<section class="projects" id="projects">
+  <div class="section-shell">
+
+    <div class="section-heading">
+      <span class="section-number">02</span>
+      <span class="section-line"></span>
+      <p>Projets sélectionnés</p>
+    </div>
+
+    <div class="projects__intro">
+      <h2>
+        Des projets qui montrent
+        <span>comment je réfléchis.</span>
+      </h2>
+
+      <p>
+        Au-delà des technologies utilisées, chaque projet représente
+        une problématique à comprendre, structurer et résoudre.
+      </p>
+    </div>
+
+    <div class="projects__list">
+
+      @for (project of projects; track project.number) {
+
+        <article class="project">
+
+          <div class="project__top">
+            <div class="project__identity">
+              <span class="project__number">
+                {{ project.number }}
+              </span>
+
+              <span class="project__type">
+                {{ project.type }}
+              </span>
+            </div>
+
+            @if (project.status) {
+              <span class="project__status">
+                {{ project.status }}
+              </span>
+            }
+          </div>
+
+          <div class="project__body">
+
+            <div class="project__main">
+              <h3>{{ project.title }}</h3>
+
+              <p class="project__description">
+                {{ project.description }}
+              </p>
+
+              <div class="project__technologies">
+                @for (technology of project.technologies; track technology) {
+                  <span>{{ technology }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="project__highlight">
+              <span class="project__highlight-label">
+                Enjeu technique
+              </span>
+
+              <p>{{ project.highlight }}</p>
+            </div>
+
+          </div>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+</section>

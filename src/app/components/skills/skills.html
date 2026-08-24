@@ -1,0 +1,67 @@
+<section class="skills" id="skills">
+  <div class="section-shell">
+
+    <div class="section-heading">
+      <span class="section-number">03</span>
+      <span class="section-line"></span>
+      <p>Compétences</p>
+    </div>
+
+    <div class="skills__grid">
+
+      <div class="skills__intro">
+        <h2>
+          Une base technique
+          <span>qui se construit.</span>
+        </h2>
+
+        <p>
+          Je développe progressivement un socle orienté backend,
+          complété par mon expérience en bases de données, systèmes
+          et analyse de données.
+        </p>
+      </div>
+
+      <div class="skills__groups">
+
+        @for (group of skillGroups; track group.title) {
+
+          <article
+            class="skill-group"
+            [class.skill-group--primary]="group.title === 'Développement Backend'"
+          >
+            <h3>{{ group.title }}</h3>
+
+            @if (group.used?.length) {
+              <div class="skill-group__section">
+                <span class="skill-label">Utilisé</span>
+
+                <div class="skill-tags">
+                  @for (skill of group.used; track skill) {
+                    <span>{{ skill }}</span>
+                  }
+                </div>
+              </div>
+            }
+
+            @if (group.learning?.length) {
+              <div class="skill-group__section">
+                <span class="skill-label">En cours d’approfondissement</span>
+
+                <div class="skill-tags">
+                  @for (skill of group.learning; track skill) {
+                    <span>{{ skill }}</span>
+                  }
+                </div>
+              </div>
+            }
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+  </div>
+</section>
