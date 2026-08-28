@@ -1,67 +1,61 @@
 <section class="skills" id="skills">
-  <div class="section-shell">
+  <div class="section-shell skills__layout">
+    <aside class="skills__feature">
+      <p class="skills__kicker">Compétences</p>
+      <h2>Une base technique solide et en constante évolution.</h2>
+      <span class="skills__accent" aria-hidden="true"></span>
+      <p class="skills__intro">
+        Je développe progressivement un socle orienté backend, complété par mon expérience en bases
+        de données, systèmes et analyse de données.
+      </p>
 
-    <div class="section-heading">
-      <span class="section-number">03</span>
-      <span class="section-line"></span>
-      <p>Compétences</p>
-    </div>
+      <div class="skills__backend">
+        <div>
+          <small>Utilisé</small>
+          <span>Java</span>
+        </div>
+        <div>
+          <small>En approfondissement</small>
+          <span>Spring Boot · API REST · JPA / Hibernate</span>
+        </div>
+      </div>
+    </aside>
 
     <div class="skills__grid">
+      @for (group of skillGroups; track group.title) {
+        <article
+          class="skill-card"
+          [class.skill-card--wide]="group.title === 'Compétences complémentaires'"
+        >
+          <div class="skill-card__icon" aria-hidden="true">{{ group.icon }}</div>
+          <h3>{{ group.title }}</h3>
 
-      <div class="skills__intro">
-        <h2>
-          Une base technique
-          <span>qui se construit.</span>
-        </h2>
+          @if (group.used?.length) {
+            <div class="skill-card__tags">
+              @for (skill of group.used; track skill) {
+                <span>{{ skill }}</span>
+              }
+            </div>
+          }
 
-        <p>
-          Je développe progressivement un socle orienté backend,
-          complété par mon expérience en bases de données, systèmes
-          et analyse de données.
-        </p>
-      </div>
+          @if (group.learning?.length) {
+            <small class="skill-card__label">En cours d’approfondissement</small>
+            <div class="skill-card__tags">
+              @for (skill of group.learning; track skill) {
+                <span>{{ skill }}</span>
+              }
+            </div>
+          }
+        </article>
+      }
 
-      <div class="skills__groups">
-
-        @for (group of skillGroups; track group.title) {
-
-          <article
-            class="skill-group"
-            [class.skill-group--primary]="group.title === 'Développement Backend'"
-          >
-            <h3>{{ group.title }}</h3>
-
-            @if (group.used?.length) {
-              <div class="skill-group__section">
-                <span class="skill-label">Utilisé</span>
-
-                <div class="skill-tags">
-                  @for (skill of group.used; track skill) {
-                    <span>{{ skill }}</span>
-                  }
-                </div>
-              </div>
-            }
-
-            @if (group.learning?.length) {
-              <div class="skill-group__section">
-                <span class="skill-label">En cours d’approfondissement</span>
-
-                <div class="skill-tags">
-                  @for (skill of group.learning; track skill) {
-                    <span>{{ skill }}</span>
-                  }
-                </div>
-              </div>
-            }
-
-          </article>
-
-        }
-
-      </div>
-
+      <article class="learning-card">
+        <span class="learning-card__icon" aria-hidden="true">↗</span>
+        <div>
+          <h3>Toujours en train d’apprendre</h3>
+          <p>Nouvelles technos, bonnes pratiques et défis backend motivants.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>

@@ -7,6 +7,8 @@ interface Project {
   description: string;
   technologies: string[];
   highlight: string;
+  githubUrl: string;
+  visual: 'cimebook' | 'dungeon' | 'hostage';
   status?: string;
 }
 
@@ -14,41 +16,46 @@ interface Project {
   selector: 'app-projects',
   imports: [],
   templateUrl: './projects.html',
-  styleUrl: './projects.css'
+  styleUrl: './projects.css',
 })
 export class Projects {
-
   projects: Project[] = [
     {
       number: '01',
       title: 'CimeBook',
       type: 'Projet personnel · En cours',
       description:
-        'Une plateforme dédiée à la réservation d’activités de montagne et de lac autour d’Annecy, pensée pour évoluer progressivement vers une application full stack.',
-      technologies: ['Java', 'Spring Boot', 'REST API', 'SQL'],
+        'Plateforme de réservation d’activités de montagne et de lac autour d’Annecy, pensée pour évoluer progressivement vers une application full stack.',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Java', 'Spring Boot'],
       highlight:
-        'Concevoir progressivement une architecture backend claire et évolutive.',
-      status: 'En cours'
+        'Faire évoluer progressivement le projet d’une interface statique vers une architecture backend Java / Spring Boot claire et structurée.',
+      githubUrl: 'https://github.com/gheisariyeh/cimebook',
+      visual: 'cimebook',
+      status: 'En cours',
     },
     {
       number: '02',
-      title: 'SIRENE · Passage à l’échelle',
-      type: 'Projet de formation',
+      title: 'Dungeon Crawler Java',
+      type: 'Projet Java · Formation',
       description:
-        'Travail sur un jeu de données volumineux afin d’analyser les performances des requêtes et l’impact des choix d’indexation.',
-      technologies: ['Java', 'SQL', 'MySQL', 'Docker'],
+        'Application console inspirée de l’univers Dungeon & Dragons, développée en Java pour mettre en pratique la programmation orientée objet.',
+      technologies: ['Java', 'POO', 'UML', 'Héritage', 'Polymorphisme', 'Git'],
       highlight:
-        'Comprendre comment la structure des données et les index influencent les performances.'
+        'Modéliser les personnages, équipements, ennemis et règles du jeu tout en séparant clairement les responsabilités entre les classes.',
+      githubUrl: 'https://github.com/gheisariyeh/dungeon-crawler-java',
+      visual: 'dungeon',
     },
     {
       number: '03',
       title: 'HosTaGe · BACnet',
-      type: 'Projet de recherche',
+      type: 'Projet académique · Recherche',
       description:
-        'Intégration et simulation du protocole BACnet dans une application existante, avec analyse des communications réseau et exploitation de données.',
-      technologies: ['Java', 'Android', 'BACnet', 'Wireshark'],
+        'Intégration et simulation du protocole BACnet dans une application Android existante, avec analyse des communications réseau en Java.',
+      technologies: ['Java', 'Android', 'BACnet', 'BACnet4J', 'Wireshark', 'Réseaux'],
       highlight:
-        'Travailler sur une base de code existante et intégrer un protocole réseau complexe.'
-    }
+        'Comprendre une base de code existante, intégrer un protocole réseau spécifique et analyser les échanges techniques associés.',
+      githubUrl: 'https://github.com/gheisariyeh/HosTaGe',
+      visual: 'hostage',
+    },
   ];
 }

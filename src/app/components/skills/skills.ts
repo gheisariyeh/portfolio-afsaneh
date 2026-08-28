@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 interface SkillGroup {
   title: string;
+  icon: string;
   used?: string[];
   learning?: string[];
 }
@@ -10,38 +11,30 @@ interface SkillGroup {
   selector: 'app-skills',
   imports: [],
   templateUrl: './skills.html',
-  styleUrl: './skills.css'
+  styleUrl: './skills.css',
 })
 export class Skills {
-
   skillGroups: SkillGroup[] = [
     {
-      title: 'Développement Backend',
-      used: ['Java'],
-      learning: ['Spring Boot', 'API REST', 'JPA / Hibernate']
-    },
-    {
       title: 'Bases de données',
-      used: ['SQL', 'MySQL', 'Indexation', 'Analyse de performances']
+      icon: '▤',
+      used: ['SQL', 'MySQL', 'Indexation', 'Analyse de performances'],
     },
     {
       title: 'Outils & environnement',
-      used: ['Git', 'GitHub', 'Docker', 'IntelliJ IDEA', 'Gradle']
+      icon: '⌁',
+      used: ['Git', 'GitHub', 'Docker', 'IntelliJ IDEA', 'Gradle'],
     },
     {
       title: 'Frontend — fondamentaux',
+      icon: '</>',
       used: ['HTML', 'CSS', 'JavaScript'],
-      learning: ['TypeScript', 'Angular']
+      learning: ['TypeScript', 'Angular'],
     },
     {
       title: 'Compétences complémentaires',
-      used: [
-        'Python',
-        'Analyse de données',
-        'Machine Learning',
-        'Réseaux',
-        'Cybersécurité'
-      ]
-    }
+      icon: '◎',
+      used: ['Python', 'Analyse de données', 'Machine Learning', 'Réseaux', 'Cybersécurité'],
+    },
   ];
 }

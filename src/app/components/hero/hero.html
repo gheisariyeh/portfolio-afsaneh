@@ -1,112 +1,117 @@
-<section class="hero">
-  <div class="hero__glow hero__glow--one"></div>
-  <div class="hero__glow hero__glow--two"></div>
-
-  <div class="hero__inner">
-
+<section class="hero" id="home">
+  <div class="section-shell hero__grid">
     <div class="hero__content">
-
-      <div class="hero__status">
-        <span class="hero__status-dot"></span>
-        <span>Recherche d’alternance</span>
-        <span class="hero__separator"></span>
-        <span>Janvier 2027</span>
-        <span class="hero__separator"></span>
-        <span>Annecy</span>
+      <div
+        class="hero__status"
+        aria-label="Recherche d’alternance à Annecy à partir de janvier 2027"
+      >
+        <span class="hero__status-pill"
+          ><span class="hero__status-dot"></span>Recherche d’alternance</span
+        >
+        <span class="hero__meta">▣ Janvier 2027</span>
+        <span class="hero__meta">⌖ Annecy</span>
       </div>
 
       <h1>
-        Je conçois des expériences
-        <span>backend robustes</span>
-        et utiles.
+        Je conçois des<br />
+        expériences<br />
+        <span>backend</span><br />
+        robustes et utiles.
       </h1>
 
-      <div class="hero__identity">
-        <span class="hero__line"></span>
-
-        <div>
-          <strong>Afsaneh Gheisariyeh</strong>
-          <p>Développeuse Backend Java · Spring Boot</p>
-        </div>
-      </div>
+      <p class="hero__role">Développeuse Backend Java · Spring Boot</p>
 
       <p class="hero__description">
-        En formation au Campus Numérique in the Alps, je construis
-        aujourd’hui mon parcours autour de Java, des API REST et de
-        l’architecture backend.
+        En formation au Campus Numérique in the Alps, je construis aujourd’hui mon parcours autour
+        de Java, des API REST et de l’architecture backend.
       </p>
 
       <div class="hero__actions">
-        <a href="#projects" class="button button--primary">
+        <a class="hero__button hero__button--primary" href="#projects">
+          <span aria-hidden="true">→</span>
           Découvrir mes projets
-          <span>↓</span>
         </a>
 
-        <a
-          href="https://github.com/gheisariyeh"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button button--secondary"
-        >
-          GitHub
-          <span>↗</span>
+        <a class="hero__button hero__button--secondary" href="#contact">
+          <span aria-hidden="true">✉</span>
+          Me contacter
         </a>
       </div>
 
+      <div class="hero__stack" aria-label="Technologies principales">
+        <span><b>♨</b> Java</span>
+        <span><b>◒</b> Spring Boot</span>
+        <span><b>▤</b> SQL</span>
+        <span><b>&#123; &#125;</b> REST</span>
+      </div>
     </div>
 
-    <div class="hero__visual" aria-hidden="true">
-
+    <div class="hero__visual">
       <div class="architecture">
+        <div class="architecture__mesh" aria-hidden="true"></div>
 
         <div class="architecture__header">
-          <span>BACKEND SYSTEM</span>
-          <span>01</span>
-        </div>
-
-        <div class="architecture__stage architecture__stage--client">
-          <span class="node-label">CLIENT</span>
-        </div>
-
-        <div class="architecture__connector architecture__connector--one"></div>
-
-        <div class="architecture__stage architecture__stage--api">
-          <span class="node-label">REST API</span>
-          <small>HTTP</small>
-        </div>
-
-        <div class="architecture__connector architecture__connector--two"></div>
-
-        <div class="architecture__middle">
-          <div class="architecture__node">
-            <span>SERVICE</span>
-          </div>
-
-          <div class="architecture__node">
-            <span>DOMAIN</span>
+          <div>
+            <strong>Architecture backend</strong>
+            <span>Architecture simplifiée</span>
           </div>
         </div>
 
-        <div class="architecture__connector architecture__connector--three"></div>
+        <div class="architecture__flow">
+          <div class="architecture__node">
+            <span class="architecture__icon architecture__icon--person" aria-hidden="true"></span>
+            <div>
+              <strong>Client</strong>
+              <small>Interface utilisateur</small>
+            </div>
+          </div>
 
-        <div class="architecture__database">
-          <div class="database-icon"></div>
-          <span>SQL DATABASE</span>
+          <div class="architecture__connector">
+            <span>HTTP / JSON</span>
+          </div>
+
+          <div class="architecture__node architecture__node--accent">
+            <span class="architecture__icon architecture__icon--api" aria-hidden="true"></span>
+            <div>
+              <strong>API REST</strong>
+              <small>Spring Boot</small>
+            </div>
+          </div>
+
+          <div class="architecture__arrow" aria-hidden="true">↓</div>
+
+          <div class="architecture__node architecture__node--logic">
+            <span class="architecture__icon architecture__icon--layers" aria-hidden="true"></span>
+            <div>
+              <strong>Logique métier</strong>
+              <small>Services · Domain</small>
+            </div>
+          </div>
+
+          <div class="architecture__split" aria-hidden="true"></div>
+
+          <div class="architecture__bottom">
+            <div class="architecture__node architecture__node--small">
+              <span
+                class="architecture__icon architecture__icon--database"
+                aria-hidden="true"
+              ></span>
+              <div>
+                <strong>Base SQL</strong>
+                <small>Persistance</small>
+              </div>
+            </div>
+
+            <div class="architecture__node architecture__node--small">
+              <span class="architecture__icon architecture__icon--gear" aria-hidden="true"></span>
+              <div>
+                <strong>Outils</strong>
+                <small>Git · GitHub · Docker</small>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="architecture__footer">
-          JAVA
-          <span>·</span>
-          SPRING BOOT
-          <span>·</span>
-          REST
-          <span>·</span>
-          SQL
-        </div>
-
       </div>
-
     </div>
-
   </div>
 </section>

@@ -1,13 +1,20 @@
 <header class="navbar">
-
   <div class="navbar__inner">
 
-    <a href="#" class="navbar__brand" (click)="closeMenu()">
+    <a
+      href="#home"
+      class="navbar__brand"
+      (click)="closeMenu()"
+      aria-label="Retour à l’accueil"
+    >
       <span>Afsaneh</span>
       <strong>Gheisariyeh</strong>
     </a>
 
-    <nav class="navbar__links" aria-label="Navigation principale">
+    <nav
+      class="navbar__links"
+      aria-label="Navigation principale"
+    >
       <a href="#about">À propos</a>
       <a href="#projects">Projets</a>
       <a href="#skills">Compétences</a>
@@ -21,9 +28,20 @@
       target="_blank"
       rel="noopener noreferrer"
       class="navbar__github"
+      aria-label="Voir mon profil GitHub"
     >
-      GitHub
-      <span aria-hidden="true">↗</span>
+      <span
+        class="navbar__github-icon"
+        aria-hidden="true"
+      >
+        ●
+      </span>
+
+      <span>GitHub</span>
+
+      <span aria-hidden="true">
+        ↗
+      </span>
     </a>
 
     <button
@@ -40,41 +58,58 @@
   </div>
 
   @if (menuOpen) {
-
-    <nav class="mobile-menu" aria-label="Navigation mobile">
-
-      <a href="#about" (click)="closeMenu()">
+    <nav
+      class="mobile-menu"
+      aria-label="Navigation mobile"
+    >
+      <a
+        href="#about"
+        (click)="closeMenu()"
+      >
         <span>01</span>
         À propos
       </a>
 
-      <a href="#projects" (click)="closeMenu()">
+      <a
+        href="#projects"
+        (click)="closeMenu()"
+      >
         <span>02</span>
         Projets
       </a>
 
-      <a href="#skills" (click)="closeMenu()">
+      <a
+        href="#skills"
+        (click)="closeMenu()"
+      >
         <span>03</span>
         Compétences
       </a>
 
-      <a href="#journey" (click)="closeMenu()">
+      <a
+        href="#journey"
+        (click)="closeMenu()"
+      >
         <span>04</span>
         Parcours
       </a>
 
-      <a href="#education" (click)="closeMenu()">
+      <a
+        href="#education"
+        (click)="closeMenu()"
+      >
         <span>05</span>
         Formation
       </a>
 
-      <a href="#contact" (click)="closeMenu()">
+      <a
+        href="#contact"
+        (click)="closeMenu()"
+      >
         <span>06</span>
         Contact
       </a>
-
     </nav>
-
   }
 
 </header>

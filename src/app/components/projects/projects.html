@@ -1,79 +1,72 @@
 <section class="projects" id="projects">
   <div class="section-shell">
+    <div class="projects__heading">
+      <div>
+        <p class="section-kicker">Projets sélectionnés</p>
+        <h2>Des projets concrets, pensés pour évoluer.</h2>
+      </div>
 
-    <div class="section-heading">
-      <span class="section-number">02</span>
-      <span class="section-line"></span>
-      <p>Projets sélectionnés</p>
+      <a
+        class="projects__github"
+        href="https://github.com/gheisariyeh"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Voir tous les projets <span aria-hidden="true">↗</span>
+      </a>
     </div>
 
-    <div class="projects__intro">
-      <h2>
-        Des projets qui montrent
-        <span>comment je réfléchis.</span>
-      </h2>
-
-      <p>
-        Au-delà des technologies utilisées, chaque projet représente
-        une problématique à comprendre, structurer et résoudre.
-      </p>
-    </div>
-
-    <div class="projects__list">
-
-      @for (project of projects; track project.number) {
-
-        <article class="project">
-
-          <div class="project__top">
-            <div class="project__identity">
-              <span class="project__number">
-                {{ project.number }}
-              </span>
-
-              <span class="project__type">
-                {{ project.type }}
-              </span>
+    <div class="projects__grid">
+      @for (project of projects; track project.title) {
+        <article class="project-card">
+          <a
+            [class]="'project-card__visual project-card__visual--' + project.visual"
+            [href]="project.githubUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="'Voir ' + project.title + ' sur GitHub'"
+          >
+            <div class="project-card__visual-icon" aria-hidden="true">
+              @if (project.visual === 'cimebook') {
+                △
+              }
+              @if (project.visual === 'dungeon') {
+                ⚔
+              }
+              @if (project.visual === 'hostage') {
+                ◈
+              }
             </div>
 
             @if (project.status) {
-              <span class="project__status">
-                {{ project.status }}
-              </span>
+              <span class="project-card__status">{{ project.status }}</span>
             }
-          </div>
+          </a>
 
-          <div class="project__body">
+          <div class="project-card__body">
+            <div class="project-card__meta">{{ project.type }}</div>
 
-            <div class="project__main">
-              <h3>{{ project.title }}</h3>
+            <h3>
+              <a href="{{ project.githubUrl }}" target="_blank" rel="noopener noreferrer">
+                {{ project.title }} <span aria-hidden="true">↗</span>
+              </a>
+            </h3>
 
-              <p class="project__description">
-                {{ project.description }}
-              </p>
+            <p>{{ project.description }}</p>
 
-              <div class="project__technologies">
-                @for (technology of project.technologies; track technology) {
-                  <span>{{ technology }}</span>
-                }
-              </div>
+            <div class="project-card__tags">
+              @for (technology of project.technologies; track technology) {
+                <span>{{ technology }}</span>
+              }
             </div>
 
-            <div class="project__highlight">
-              <span class="project__highlight-label">
-                Enjeu technique
-              </span>
-
-              <p>{{ project.highlight }}</p>
+            <div class="project-card__challenge">
+              <strong>Enjeu technique</strong>
+              <span>{{ project.highlight }}</span>
             </div>
-
           </div>
-
         </article>
-
       }
-
     </div>
-
   </div>
 </section>
