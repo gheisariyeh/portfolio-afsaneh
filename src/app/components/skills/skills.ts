@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 interface SkillGroup {
   title: string;
   icon: string;
-  used?: string[];
-  learning?: string[];
+  items: string[];
+  wide?: boolean;
 }
 
 @Component({
@@ -18,23 +18,28 @@ export class Skills {
     {
       title: 'Bases de données',
       icon: '▤',
-      used: ['SQL', 'MySQL', 'Indexation', 'Analyse de performances'],
+      items: ['SQL', 'MySQL', 'SQL Server'],
+    },
+    {
+      title: 'Web',
+      icon: '</>',
+      items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular'],
     },
     {
       title: 'Outils & environnement',
       icon: '⌁',
-      used: ['Git', 'GitHub', 'Docker', 'IntelliJ IDEA', 'Gradle'],
+      items: ['Git', 'GitHub', 'Docker', 'IntelliJ IDEA', 'Gradle'],
     },
     {
-      title: 'Frontend — fondamentaux',
-      icon: '</>',
-      used: ['HTML', 'CSS', 'JavaScript'],
-      learning: ['TypeScript', 'Angular'],
-    },
-    {
-      title: 'Compétences complémentaires',
-      icon: '◎',
-      used: ['Python', 'Analyse de données', 'Machine Learning', 'Réseaux', 'Cybersécurité'],
+      title: 'Certifications',
+      icon: '✓',
+      items: [
+        'Spring Boot 3, Spring 6 & Hibernate',
+        'Java for Android',
+        'Android App Components',
+        'Learn HTML and CSS',
+      ],
+      wide: true,
     },
   ];
 }

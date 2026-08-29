@@ -25,10 +25,10 @@ export class Projects {
       title: 'CimeBook',
       type: 'Projet personnel · En cours',
       description:
-        'Plateforme de réservation d’activités de montagne et de lac autour d’Annecy, pensée pour évoluer progressivement vers une application full stack.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Java', 'Spring Boot'],
+        'Plateforme de réservation d’activités autour d’Annecy, pensée pour évoluer vers une architecture full stack Java / Spring Boot.',
+      technologies: ['Java', 'Spring Boot'],
       highlight:
-        'Faire évoluer progressivement le projet d’une interface statique vers une architecture backend Java / Spring Boot claire et structurée.',
+        'Faire évoluer progressivement le projet vers une architecture full stack Java / Spring Boot.',
       githubUrl: 'https://github.com/gheisariyeh/cimebook',
       visual: 'cimebook',
       status: 'En cours',
@@ -38,10 +38,10 @@ export class Projects {
       title: 'Dungeon Crawler Java',
       type: 'Projet Java · Formation',
       description:
-        'Application console inspirée de l’univers Dungeon & Dragons, développée en Java pour mettre en pratique la programmation orientée objet.',
-      technologies: ['Java', 'POO', 'UML', 'Héritage', 'Polymorphisme', 'Git'],
+        'Application console Java pour pratiquer la programmation orientée objet, l’héritage, le polymorphisme et la structuration des classes.',
+      technologies: ['Java', 'POO', 'Héritage', 'Polymorphisme'],
       highlight:
-        'Modéliser les personnages, équipements, ennemis et règles du jeu tout en séparant clairement les responsabilités entre les classes.',
+        'Mettre en pratique la POO, l’héritage, le polymorphisme et la structuration des classes.',
       githubUrl: 'https://github.com/gheisariyeh/dungeon-crawler-java',
       visual: 'dungeon',
     },
@@ -50,10 +50,10 @@ export class Projects {
       title: 'HosTaGe · BACnet',
       type: 'Projet académique · Recherche',
       description:
-        'Intégration et simulation du protocole BACnet dans une application Android existante, avec analyse des communications réseau en Java.',
-      technologies: ['Java', 'Android', 'BACnet', 'BACnet4J', 'Wireshark', 'Réseaux'],
+        'Intégration du protocole BACnet dans un honeypot Android Java et analyse des communications réseau.',
+      technologies: ['Java', 'Android', 'BACnet'],
       highlight:
-        'Comprendre une base de code existante, intégrer un protocole réseau spécifique et analyser les échanges techniques associés.',
+        'Intégrer le protocole BACnet dans une application Android Java et analyser les communications réseau.',
       githubUrl: 'https://github.com/gheisariyeh/HosTaGe',
       visual: 'hostage',
     },
