@@ -274,6 +274,21 @@ h1 span {
   background: rgba(255, 255, 255, 0.9);
 }
 
+
+.hero__button--linkedin {
+  color: #0a66c2;
+
+  border: 1px solid #b9d4f4;
+
+  background: #f4f8ff;
+}
+
+.hero__button--linkedin:hover {
+  border-color: #0a66c2;
+
+  background: #edf5ff;
+}
+
 .hero__button:hover {
   transform: translateY(-2px);
 
