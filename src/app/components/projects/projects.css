@@ -219,6 +219,64 @@
     );
 }
 
+/* SQUARE GAMES */
+
+.project-card__visual--square-games {
+  background:
+    radial-gradient(
+      circle at 62% 42%,
+      rgba(255, 255, 255, 0.22),
+      transparent 18%
+    ),
+    linear-gradient(
+      145deg,
+      #0b2a55 0%,
+      #1556a4 52%,
+      #0b3268 100%
+    );
+}
+
+.project-card__visual--square-games::before {
+  inset: 24px 26px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 12%,
+      rgba(255, 255, 255, 0.1) 12% 13%,
+      transparent 13% 87%,
+      rgba(255, 255, 255, 0.1) 87% 88%,
+      transparent 88%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(7, 35, 72, 0.9) 0 20px,
+      rgba(23, 78, 143, 0.92) 21px 36px
+    );
+
+  clip-path:
+    polygon(
+      0 100%,
+      0 38%,
+      12% 38%,
+      12% 20%,
+      25% 20%,
+      25% 46%,
+      40% 46%,
+      40% 10%,
+      52% 10%,
+      52% 43%,
+      70% 43%,
+      70% 24%,
+      84% 24%,
+      84% 42%,
+      100% 42%,
+      100% 100%
+    );
+
+  opacity: 0.9;
+}
+
 /* DUNGEON */
 
 .project-card__visual--dungeon {

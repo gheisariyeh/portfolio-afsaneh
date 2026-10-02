@@ -8,7 +8,7 @@ interface Project {
   technologies: string[];
   highlight: string;
   githubUrl: string;
-  visual: 'cimebook' | 'dungeon' | 'hostage';
+  visual: 'square-games' | 'cimebook' | 'hostage';
   status?: string;
 }
 
@@ -22,28 +22,28 @@ export class Projects {
   projects: Project[] = [
     {
       number: '01',
-      title: 'CimeBook',
-      type: 'Projet personnel · En cours',
+      title: 'Square Games API & Users API',
+      type: 'Java / Spring Boot',
       description:
-        'Plateforme de réservation d’activités autour d’Annecy, pensée pour évoluer vers une architecture full stack Java / Spring Boot.',
-      technologies: ['Java', 'Spring Boot'],
+        'Développement de deux API REST pour la gestion de jeux et d’utilisateurs avec Spring Boot.',
+      technologies: ['Java', 'Spring Boot', 'API REST', 'JDBC / JPA', 'MySQL', 'Docker', 'Postman'],
       highlight:
-        'Faire évoluer progressivement le projet vers une architecture full stack Java / Spring Boot.',
-      githubUrl: 'https://github.com/gheisariyeh/cimebook',
-      visual: 'cimebook',
-      status: 'En cours',
+        'Mise en place d’une architecture en couches, de la persistance avec JDBC/JPA, d’un environnement Docker et de tests d’API avec Postman.',
+      githubUrl: 'https://github.com/gheisariyeh/square-games-api',
+      visual: 'square-games',
     },
     {
       number: '02',
-      title: 'Dungeon Crawler Java',
-      type: 'Projet Java · Formation',
+      title: 'CimeBook',
+      type: 'Projet personnel · En cours',
       description:
-        'Application console Java pour pratiquer la programmation orientée objet, l’héritage, le polymorphisme et la structuration des classes.',
-      technologies: ['Java', 'POO', 'Héritage', 'Polymorphisme'],
+        'Conception d’une plateforme de réservation d’activités autour d’Annecy. Développement progressif du backend avec Spring Boot, JPA et H2. Conception du modèle de données et gestion des activités.',
+      technologies: ['Spring Boot', 'JPA', 'H2'],
       highlight:
-        'Mettre en pratique la POO, l’héritage, le polymorphisme et la structuration des classes.',
-      githubUrl: 'https://github.com/gheisariyeh/dungeon-crawler-java',
-      visual: 'dungeon',
+        'Développement progressif du backend, conception du modèle de données et gestion des activités.',
+      githubUrl: 'https://github.com/gheisariyeh/cimebook',
+      visual: 'cimebook',
+      status: 'En cours',
     },
     {
       number: '03',
